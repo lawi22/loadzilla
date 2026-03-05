@@ -4,7 +4,7 @@
 
 # Loadzilla
 
-Fast, zero-config HTTP load testing — run from the terminal or open the browser UI in one command.<br>
+Fast, zero-config HTTP load testing — run as CLI or open the browser UI in one command.<br>
 Optional CSV import to parameterize field and start firing custom requests.<br>
 You choose concurrent threads.<br>
 You choose requests per second.<br>
