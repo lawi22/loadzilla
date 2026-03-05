@@ -1,10 +1,15 @@
-<p align="center">
+<p align="left">
   <img src="loadzilla-icon.webp" width="160" alt="Loadzilla — Godzilla breathing HTTP methods">
 </p>
 
-# ⚡ Loadzilla
+# Loadzilla
 
-Fast, zero-config HTTP load testing — run from the terminal or open the browser UI in one command.
+Fast, zero-config HTTP load testing — run from the terminal or open the browser UI in one command.<br>
+Optional CSV import to parameterize field and start firing custom requests.<br>
+You choose concurrent threads.<br>
+You choose requests per second.<br>
+You choose duration.<br>
+Live progress and nstant results<br>
 
 ---
 
