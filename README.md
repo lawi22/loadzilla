@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="loadzilla-icon.webp" width="160" alt="Loadzilla — Godzilla breathing HTTP methods">
+</p>
+
 # ⚡ Loadzilla
 
 Fast, zero-config HTTP load testing — run from the terminal or open the browser UI in one command.

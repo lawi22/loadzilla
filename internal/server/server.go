@@ -15,12 +15,16 @@ import (
 //go:embed web/index.html
 var indexHTML []byte
 
+//go:embed web/loadzilla-icon.webp
+var iconWebp []byte
+
 var running atomic.Bool
 
 // Start registers HTTP routes and starts the server on the given port.
 func Start(port int) error {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", serveIndex)
+	mux.HandleFunc("/icon.webp", serveIcon)
 	mux.HandleFunc("/api/run", handleRun)
 
 	addr := fmt.Sprintf(":%d", port)
@@ -31,6 +35,12 @@ func Start(port int) error {
 func serveIndex(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	_, _ = w.Write(indexHTML)
+}
+
+func serveIcon(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "image/webp")
+	w.Header().Set("Cache-Control", "max-age=86400")
+	_, _ = w.Write(iconWebp)
 }
 
 type runRequest struct {
